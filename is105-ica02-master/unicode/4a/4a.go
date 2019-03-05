@@ -13,5 +13,6 @@ func main() {
 	fmt.Printf("%s\n", os.Args)
 	expression := "nord og sør"
 	trans := unicode.Translate(expression, language)
+
 	fmt.Printf("%s", trans)
 }
