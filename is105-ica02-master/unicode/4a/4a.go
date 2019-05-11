@@ -9,10 +9,12 @@ import (
 
 func main() {
 	//Skriv jp eller is etter 'go run unicode_main.go'
-	language := os.Args[1]
-	fmt.Printf("%s\n", os.Args)
-	expression := "nord og sør"
-	trans := unicode.Translate(expression, language)
-
-	fmt.Printf("%s", trans)
+	if len(os.Args) > 1 {
+		language := os.Args[1]
+		expression := "nord og sør"
+		trans := unicode.Translate(expression, language)
+		fmt.Printf("%s\n", trans)
+	} else {
+		fmt.Println("Ingen språk spesifisert!")
+	}
 }
